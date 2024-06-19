@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<!-- SELECTOR : THREE TYPES
+	- ELEMENT SELECTOR:  div {style}, h1 {style}
+	- ID SELECTOR: #idname {style}
+	- CLASS SELECTOR: .classname {style}
+	- UNIVERSAL SELECTOR: * {style}
+-->
+
+<html>
+<head>
+	<title>Selectors</title>
+	<style type="text/css">
+		#firstdiv { /* ID SELECTOR */
+			background-color: blue;
+		}
+		#seconddiv {
+			background-color: violet;
+		}
+		#firstheading {
+			color: yellow;
+		}
+		#secondheading {
+			color: orange;
+		}
+		.heady {
+			color: red;
+		}
+		* { /* UNIVERSAL SELECTOR */
+			font-size: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div id="firstdiv">
+		<h1 id="firstheading">DIV1</h1>
+	</div>
+	<div id="seconddiv">
+		<h1 id="secondheading">DIV2</h1>
+	</div>
+	<h3 class="heady">HELLO WORLD</h3>
+	<h4 class="heady">HELLO WORLD</h4>
+</body>
+</html>
