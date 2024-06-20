@@ -1,0 +1,30 @@
+#head1 {
+	color: red;
+}
+
+#head2 {
+	color: green;
+}
+
+#head3 {
+	color: blue;
+}
+
+#head4 {
+	color: indigo;
+}
+
+.headings {
+	display: flex;
+	background-color: lightgreen;
+	justify-content: space-around;
+	/* space-between, space-around, center, left, right */
+}
+
+.inner {
+	display: flex;
+	width: 45%;
+	justify-content: space-between;
+	background-color: yellow;
+	margin: 10px;
+}
