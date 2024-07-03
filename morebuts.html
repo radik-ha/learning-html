@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MORE BUTTONS</title>
+</head>
+<body>
+	<button onclick="createMoreButtons()">CLICK ME</button>
+	<script type="text/javascript">
+		function createMoreButtons(){
+			const divv = document.createElement("div");
+			let s = "";
+			for(let i=0; i<100; i++){
+				s += "<button onclick='alert("+i+")'>"+i+"</button>";
+			}
+			divv.innerHTML = s;
+			document.body.appendChild(divv);
+		}
+	</script>
+</body>
+</html>

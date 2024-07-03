@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Learning</title>
+	<script type="text/javascript">
+		function toggleBulb(){
+			const bulb = document.getElementById("bulb");
+			if(bulb.src.match("off")){
+				bulb.src = "on.gif";
+			} else {
+				bulb.src = "off.gif";
+			}
+		}
+	</script>
+</head>
+<body>
+	<img onclick="toggleBulb()" src="on.gif" id="bulb" alt="Bulb Image not loaded">
+</body>
+</html>

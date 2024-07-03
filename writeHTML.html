@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<div id="divv"></div>
+	<button onclick="createHTML()">CREATE</button>
+	<script type="text/javascript">
+		function createHTML(){
+			const heading = document.createElement("h1");
+			heading.innerText = "Hello World!";
+			const divv = document.querySelector("#divv");
+			divv.appendChild(heading);
+		}
+	</script>
+</body>
+</html>

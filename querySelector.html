@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EVENT LISTENER</title>
+</head>
+<body>
+	<h1 id="heading1">HERE 1</h1>
+	<h1 id="heading2">HERE 2</h1>
+	<h1 class="headd">HEY</h1>
+	<h1 class="headd">HEY HELLO</h1>
+	<button onclick="doSomething()">CLICK</button>
+
+	<script type="text/javascript">
+		function doSomething(){
+			const head1 = document.querySelector("#heading1");	// similar as document.getElementById("heading1")
+			const lhead = document.querySelectorAll("h1");
+			const lheadd = document.querySelectorAll(".headd");
+			lhead[0].style.color = "blue";
+			lhead[1].style.color = "red";
+			lheadd[0].style.fontSize = "200px";
+			lheadd[1].style.fontSize = "30px";
+		}
+	</script>
+</body>
+</html>

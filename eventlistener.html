@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EVENT LISTENER</title>
+</head>
+<body>
+	
+	<button id="butt">Say Hello</button>
+	<h1 id="firsthead">CHANGE MY COLOR</h1>
+	<h1 id="secondhead">CHANGE ALL HEADINGS COLOR</h1>
+	<h1>DOLPHIN 1</h1>
+	<h1>DOLPHIN 2</h1>
+	<h1>DOLPHIN 3</h1>
+	
+	<script type="text/javascript">
+		const b = document.querySelector("#butt");
+		b.addEventListener("click",doSomething);
+
+		const fh = document.querySelector("#firsthead");
+		fh.addEventListener("click",function() { 
+				colorChange(fh)
+			});
+
+		const sh = document.querySelector("#secondhead");
+		sh.addEventListener("click", changeAllHeadingColor);
+
+		function doSomething(){
+			alert("HELLO");
+		}
+
+		function colorChange(fh){
+			fh.style.color = "red";
+		}
+
+		function changeAllHeadingColor(){
+			const lh = document.querySelectorAll("h1");
+			for(let i=0;i<lh.length;i++){
+				lh[i].style.color = "red";
+			}
+		}
+		
+	</script>
+</body>
+</html>

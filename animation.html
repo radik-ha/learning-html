@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animations</title>
+	<style type="text/css">
+		
+		@keyframes change {
+			from {
+				color: red;
+			}
+			to {
+				color: green;
+			}
+		}
+
+		h1 {
+			color: red;
+			animation-name: change;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+		}
+
+		@keyframes move {
+			0% {
+				text-align: left;
+			}
+			50% {
+				text-align: center;
+			}
+			100% {
+				text-align: right;
+			}
+		}
+		
+		#second {
+			text-align: right;
+			animation-name: move;
+			animation-duration: 5s;
+			animation-iteration-count: 3;
+			animation-timing-function: ease-in;
+		}
+
+	</style>
+</head>
+<body>
+	<div>
+		<h1>Hello</h1>
+		<h2 id="second">HEY</h2>
+	</div>
+</body>
+</html>

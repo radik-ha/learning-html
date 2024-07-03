@@ -1,0 +1,16 @@
+body{
+	background-color: #06D001;
+}
+
+.topic {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr; 
+    gap: 20px;
+}
+
+.head {
+	padding: 1rem;
+	background-color: red;
+	color: white;
+
+}
