@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Using Map</title>
+</head>
+<body>
+	<div class="mydiv"></div>
+	<button onclick="generateText()">GENERATE HTML</button>
+	<script type="text/javascript">
+		const division = document.querySelector(".mydiv");
+		const colors = ["red", "green", "blue"];
+		let i = 0;
+
+		function makeHtml(data){
+			const h1 = document.createElement("h1");
+			h1.innerText = data;
+			h1.style.color = colors[i];
+			h1.style.paddingLeft = "100px";
+			i++;
+			division.appendChild(h1);
+		}
+
+		function generateText(){
+			const fruits = ["Apple", "Orange", "Melon"];
+			fruits.forEach(makeHtml);
+		}
+	</script>
+</body>
+</html>

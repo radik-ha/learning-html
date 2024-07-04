@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Object</title>
+	<style type="text/css">
+		.bird {
+			background-color: yellow;
+			margin: 15px;
+		}
+	</style>
+</head>
+<body>
+	<h1>BIRDS</h1>
+	<div id="aves"></div>
+	<button onclick="createHtml()">CREATE HTML</button>
+	<script type="text/javascript">
+		const division = document.getElementById("aves");
+		document.body.style.backgroundColor = "red";
+		// records in collection (object)
+		const birds = [
+			{
+				name: "Peacock",
+				scname: "pavo cristatus",
+				color: "violet",
+				imglink: "https://images.joseartgallery.com/115107/conversions/nature-photography-peacock-in-square-format-more-photo-thumb900.jpg"
+			},
+			{
+				name: "Mynah",
+				scname: "acridotherus tristis",
+				color: "brown",
+				imglink: "https://img.hunkercdn.com/640/cpie/images/a04/ra/dk/rid-mynah-birds-800x800.jpg"
+			},
+			{
+				name: "Chicken",
+				scname: "gallus gallus domesticus",
+				color: "black",
+				imglink: "https://i.pinimg.com/564x/82/10/43/821043318ac8e400cd94223681c3c1fa.jpg"				
+			},
+			{
+				name: "Ostrich",
+				scname: "stuthio camellus",
+				color: "brown",
+				imglink: "https://i.natgeofe.com/k/57b589e7-c9a8-47df-a355-4c759dfaf783/ostrich-running_square.jpg"
+			},
+			{
+				name: "Parrot",
+				scname: "psittacula krameri",
+				color: "green",
+				imglink: "https://lafeber.com/pet-birds/wp-content/uploads/2018/06/Indian-Ring-Necked-Parakeet.jpg"
+			}
+		]
+
+		function makeHtml(obj){
+			const d = document.createElement("div"); // <div></div>
+			d.setAttribute("class","bird");			 // <div class="bird"></div>
+			d.style.borderRadius = "2rem";
+			d.style.display = "flex";
+			const h = document.createElement("h1"); // <h1></h1>
+			h.innerText = obj.name;					// <h1>Peacock</h1>
+			const img = document.createElement("img");
+			img.setAttribute("src", obj.imglink);
+			img.setAttribute("alt", "Image not loaded");
+			img.style.width = "20%";
+			img.style.borderRadius = "2rem";
+			const i = document.createElement("i"); // <i></i>
+			i.innerText = obj.scname;			  // <i>pavo cristatus</i>
+			const p = document.createElement("p");
+			p.innerText = obj.name + " is "+obj.color+" in color...";
+			d.appendChild(h);
+			d.appendChild(img);
+			d.appendChild(i);
+			d.appendChild(p);
+			division.appendChild(d);
+		}
+
+		function createHtml(){
+			birds.forEach(makeHtml);		
+			document.querySelector("button").style.display = "none";
+		}
+	</script>
+</body>
+</html>
+
+
+
+
